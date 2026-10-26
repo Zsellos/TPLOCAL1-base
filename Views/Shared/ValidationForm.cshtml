@@ -1,5 +1,79 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Page de Validation";
 }
+@model TPLOCAL1.Models.Information
+
+<nav>
+    <ul>
+        <li><a href="/Home/Index">Accueil</a></li>
+        <li><a href="/Home/Index/AvisList">Liste avis</a></li>
+    </ul>
+</nav>
+
+<section>
+    <div>
+        <p>Votre formulaire a bien été pris en compte</p>
+            <table>
+                <caption>Personal informations</caption>
+                <tr>
+                    <td>Name</td>
+                    @* @Html.DisplayNameFor(model => model.Name)</td> *@
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Forename</td>
+                    @* @Html.DisplayNameFor(model => model.Forename)</td> *@
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    @* @Html.DisplayFor(model => model.Gender)</td> *@
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Adress</td>
+                    @* @Html.DisplayNameFor(model => model.Address)</td> *@
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Zip Code</td>
+                    @* @Html.DisplayFor(model => model.ZipCode)</td> *@
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Town</td>
+                    @* @Html.DisplayNameFor(model => model.Town)</td> *@
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Email Adress</td>
+                    @* @Html.DisplayFor(model => model.Email)</td> *@
+                    <td></td>
+                </tr>
+            </table>
+
+            <table>
+                <caption>Training information</caption>
+                <tr>
+                    <td>Start date training</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Type of training</td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <table>
+                <caption>Training reviews</caption>
+                <tr>
+                    <td>Cobol Formation</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>C# Formation</td>
+                    <td></td>
+                </tr>
+            </table>
+    </div>
+</section>
