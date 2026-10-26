@@ -21,12 +21,13 @@ namespace TPLOCAL1.Controllers
                 //Call different pages, according to the id pass as parameter
                 switch (id)
                 {
-                    case "OpinionList":
+                    case "OpinionList" or "AvisList":
                         //TODO : code reading of the xml files provide
                         return View(id);
                     case "Form":
                         //TODO : call the Form view with data model empty
-                        return View(id);
+                        var information = new Information();
+                        return View(id, information);
                     default:
                         //retourn to the Index view (see routing in Program.cs)
                         return View();
@@ -37,18 +38,18 @@ namespace TPLOCAL1.Controllers
 
         //methode to send datas from form to validation page
         [HttpPost]
-        public ActionResult ValidationFormulaire([Bind("Name,Forename,Gender,Address,ZipCode,Town,Email,StartDate,Training,ReviewCobol,ReviewCSharp")] Information information)
+        //public ActionResult ValidationFormulaire([Bind("Name,Forename,Gender,Address,ZipCode,Town,Email,StartDate,Training,ReviewCobol,ReviewCSharp")] Information information)
+        public ActionResult ValidationFormulaire(Information information)
         {
+            //TODO : test if model's fields are set
+            //if not, display an error message and stay on the form page
+            //else, call ValidationForm with the datas set by the user
+            // https://localhost:7099/Home/Index/Form
             if (ModelState.IsValid)
             {
                 return View("ValidationForm", information);
             }
             return View("Form");
-            //TODO : test if model's fields are set
-            //if not, display an error message and stay on the form page
-            //else, call ValidationForm with the datas set by the user
-
-
         }
     }
 }
