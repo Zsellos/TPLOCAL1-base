@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.VisualBasic;
 using System.ComponentModel.DataAnnotations;
 
 namespace TPLOCAL1.Models
@@ -13,6 +14,17 @@ namespace TPLOCAL1.Models
         [Display(Name = "Select a gender")]
         [Required]
         public string Gender { get; set; }
+        //public List<SelectListItem> Genders { get; set; }
+        //public void OnGet()           
+        //{
+        //    Genders = new List<SelectListItem> {
+        //    new SelectListItem { Value = "Select", Text = "Select a gender" },
+        //    new SelectListItem { Value = "Man", Text = "Man" },
+        //    new SelectListItem { Value = "Woman", Text = "Woman" },
+        //    new SelectListItem { Value = "Other", Text = "Other" },
+        //    };
+        //}
+
         [Required]
         public string Address { get; set; }
 
@@ -28,7 +40,7 @@ namespace TPLOCAL1.Models
 
         //[DataType(DateFormat)]
         [Required]
-        public DateFormat StartDate { get; set; }
+        public string StartDate { get; set; }
 
         public string TypeTraining { get; set; }
 

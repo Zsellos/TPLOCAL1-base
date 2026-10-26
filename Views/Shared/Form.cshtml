@@ -1,7 +1,9 @@
-﻿@{
+﻿@model TPLOCAL1.Models.Information
+
+@{
     ViewData["Title"] = "Formulaire TP HN avis";
 }
-@model TPLOCAL1.Models.Information
+@* @Html.ValidationSummary(false, "") *@
 
 <nav>
     <ul>
@@ -31,17 +33,20 @@
             <tr>
                 <td>Gender</td>
                 @* @Html.DisplayFor(model => model.Gender)</td> *@
-                <td><select asp-for="Gender" name="genders" id="genders">
-                    <option value="select">Select a gender</option>
-                    <option value="man">Man</option>
-                    <option value="women">Woman</option>
-                    <option value="other">Other</option>
+                <td>
+                    @* <input asp-for="Gender"/> *@
+                    @* <select asp-for="Gender" asp-items="Model.Genders" name="genders" id="genders"></select> *@
+                    <select asp-for="Gender">
+                            <option value="select">Select a gender</option>
+                            <option value="man">Man</option>
+                            <option value="women">Woman</option>
+                            <option value="other">Other</option>
                     </select>
                 </td>
                 <span asp-validation-for="Gender"></span>
             </tr>                    
             <tr>
-                <td>Adress</td>
+                <td>Address</td>
                 @* @Html.DisplayNameFor(model => model.Address)</td> *@
                 <td><input asp-for="Address" /></td>
                 <span asp-validation-for="Address"></span>
