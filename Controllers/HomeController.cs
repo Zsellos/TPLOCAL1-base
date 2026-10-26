@@ -37,12 +37,12 @@ namespace TPLOCAL1.Controllers
 
         //methode to send datas from form to validation page
         [HttpPost]
-        public ActionResult ValidationFormulaire(/*model*/)
+        public ActionResult ValidationFormulaire([Bind("Name,Forename,Gender,Adress,ZipCode,Town,Email,StartDate,Training,ReviewCobol,ReviewcSharp")] Information information)
         {
             //TODO : test if model's fields are set
             //if not, display an error message and stay on the form page
             //else, call ValidationForm with the datas set by the user
-            return null;
+            return View("ValidationForm");
 
         }
     }

@@ -1,27 +1,21 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
-        <title>HN - TP LOCAL</title>
-        <link rel="stylesheet" href="~/resources/Index.css"/>
-    </head>
+﻿@{
+    ViewData["Title"] = "HN - TP LOCAL";
+}
 
-    <body>
-        <header>
-            <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN"/>
-            <h1>Welcome to TP HN</h1>
-        </header>
+<header>
+    <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN"/>
+    <h1>Bienvenue dans le TP HN</h1>
+</header>
 
-        <nav>
-            <ul>
-            <li><a href="/Home/Index/Form">Fill in the form</a></li>
-            <li><a href="/Home/Index/AvisList">Avis list</a></li>
-            </ul>
-        </nav>
+<nav>
+    <ul>
+    <li><a href="/Home/Index/Form">Remplir le formulaire</a></li>
+    <li><a href="/Home/Index/AvisList">Liste avis</a></li>
+    </ul>
+</nav>
             
-        <section>
-            <p>
-            <a href="/Home/Index/Form">Fill out form </a>
-            </p>
-        </section>
-    </body>
-</html>
+<section>
+    <p>
+    <a href="/Home/Index/Form">Remplir le formulaire</a>
+    </p>
+</section>
