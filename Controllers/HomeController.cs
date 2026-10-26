@@ -23,7 +23,9 @@ namespace TPLOCAL1.Controllers
                 {
                     case "OpinionList" or "AvisList":
                         //TODO : code reading of the xml files provide
-                        return View(id);
+                        var opinions = new OpinionList();
+                        List<Opinion> OpList = opinions.GetAvis("XlmFile\\DataAvis.xml");
+                        return View(id, OpList);
                     case "Form":
                         //TODO : call the Form view with data model empty
                         var information = new Information();
