@@ -41,3 +41,11 @@ table, th, td {
     border: 1px solid;
 
 }
+
+.non {
+    background-color:red;
+}
+
+.yes {
+    background-color: green;
+}
