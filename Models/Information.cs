@@ -29,16 +29,17 @@ namespace TPLOCAL1.Models
         [Required(ErrorMessage = "Une addresse email est nécessaire")]
         public string Email { get; set; }
 
-        [Range(typeof(DateTime), "01/01/0001 00:00", "01/01/2021 00:00", ErrorMessage = "La date doit être inférieure à 01/01/2021")]
+        [Range(typeof(DateTime), "01/01/0001 00:00", "31/12/2020 00:00", ErrorMessage = "La date doit être inférieure à 01/01/2021")]
         [Required]
         public DateTime StartDate { get; set; } = new DateTime(2021,1,1);
 
         [Required(ErrorMessage = "Vous devez selectionner une formation")]
         public string TypeTraining { get; set; }
 
-        //[Required(ErrorMessage = "")]
+        [Required(ErrorMessage = "Vous devez rentrer un avis")]
         public string? ReviewCobol { get; set; }
 
+        [Required(ErrorMessage = "Vous devez rentrer un avis")]
         public string? ReviewCSharp { get; set; }
 
     }

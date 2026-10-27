@@ -49,3 +49,7 @@ table, th, td {
 .yes {
     background-color: green;
 }
+
+.error {
+    color: red;
+}
