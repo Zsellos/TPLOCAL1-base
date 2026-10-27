@@ -6,37 +6,40 @@ namespace TPLOCAL1.Models
 {
     public class Information
     {
-        [Required]
+        [Required(ErrorMessage = "Le nom est obligatoire")]
         public string Name { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Le prénom est obligatoire")]
         public string Forename { get; set; }
 
-        [Display(Name = "Select a gender")]
-        [Required]
+        //[Display(Name = "Select a gender")]
+        [Required(ErrorMessage = "Vous devez choisir un sexe")]
         public string Gender { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "L'adresse est obligatoire")]
         public string Address { get; set; }
 
-        [RegularExpression(@"^[0-9]{5,5}$")]
-        [Required]
+        [RegularExpression(@"^[0-9]{5,5}$", ErrorMessage = "Le code postal doit être composé de 5 chiffres")]
+        [Required(ErrorMessage = "Le Code postal est obligatoire")]
         public string ZipCode { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "La ville est obligatoire")]
         public string Town { get; set; }
 
-        [DataType(DataType.EmailAddress)]
-        [Required]
+        [DataType(DataType.EmailAddress, ErrorMessage = "Format invalide pour l'adresse email")]
+        [Required(ErrorMessage = "Une addresse email est nécessaire")]
         public string Email { get; set; }
 
-        //[DataType(DateFormat)]
+        [Range(typeof(DateTime), "01/01/0001 00:00", "01/01/2021 00:00", ErrorMessage = "La date doit être inférieure à 01/01/2021")]
         [Required]
-        public string StartDate { get; set; }
+        public DateTime StartDate { get; set; } = new DateTime(2021,1,1);
 
+        [Required(ErrorMessage = "Vous devez selectionner une formation")]
         public string TypeTraining { get; set; }
 
-        public string ReviewCobol { get; set; }
+        //[Required(ErrorMessage = "")]
+        public string? ReviewCobol { get; set; }
 
-        public string ReviewCSharp { get; set; }
+        public string? ReviewCSharp { get; set; }
 
     }
 }

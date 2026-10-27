@@ -16,90 +16,81 @@
 <div>
         <form asp-action="ValidationFormulaire" method="post">
         <table>
-            <caption>Personal informations</caption>
+            <caption>Information personnelles</caption>
             <tr>
-                <td>Name</td> 
-                <td><input asp-for="Name" /></td>
-                <span asp-validation-for="Name"></span>
+                <td>Nom</td> 
+                <td><input asp-for="Name" /> <span asp-validation-for="Name"></span></td>
             </tr>
             <tr>
-                <td>Forename</td>
-                <td><input asp-for="Forename" /></td>
-                <span asp-validation-for="Forename"></span>
+                <td>Prénom</td>
+                <td><input asp-for="Forename" /><span asp-validation-for="Forename"></span></td>
             </tr>
             <tr>
-                <td>Gender</td>
+                <td>Sexe</td>
                 <td>
                     <select asp-for="Gender">
-                            <option value="select">Select a gender</option>
-                            <option value="man">Man</option>
-                            <option value="women">Woman</option>
-                            <option value="other">Other</option>
+                            <option value="">Sélectionner un sexe</option>
+                            <option value="Homme">Homme</option>
+                            <option value="Femme">Femme</option>
+                            <option value="Autre">Autre</option>
                     </select>
+                    <span asp-validation-for="Gender"></span>
                 </td>
-                <span asp-validation-for="Gender"></span>
             </tr>                    
             <tr>
-                <td>Address</td>
-                <td><input asp-for="Address" /></td>
-                <span asp-validation-for="Address"></span>
+                <td>Addresse</td>
+                <td><input asp-for="Address" /><span asp-validation-for="Address"></span></td>
             </tr>
             <tr>
-                <td>Zip Code</td>
-                <td><input asp-for="ZipCode" /></td>
-                <span asp-validation-for="ZipCode"></span>
+                <td>Code Postal</td>
+                <td><input asp-for="ZipCode" /><span asp-validation-for="ZipCode"></span></td>
             </tr>
             <tr>
-                <td>Town</td>
-                <td><input asp-for="Town" /></td>
-                <span asp-validation-for="Town"></span>
+                <td>Ville</td>
+                <td><input asp-for="Town" /><span asp-validation-for="Town"></span></td>
             </tr>
             <tr>
-                <td>Email Adress</td>
-                <td><input asp-for="Email" /></td>
-                <span asp-validation-for="Email"></span>
+                <td>Addresse mail</td>
+                    <td><input asp-for="Email" /><span asp-validation-for="Email"></span></td>                
             </tr>
         </table>
 
         <table>
-            <caption>Training information</caption>
+            <caption>Informations formation suivie</caption>
             <tr>
-                <td>Start date training</td>
-                <td><input asp-for="StartDate" type="date" /></td>
-                <span asp-validation-for="StartDate"></span>
+                <td>Date début formation</td>
+                <td><input asp-for="StartDate" type="date"/><span asp-validation-for="StartDate"></span></td>
             </tr>
             <tr>
-                <td>Type of training</td>
+                <td>Formation suivie</td>
                 <td>
-                        <select asp-for="TypeTraining">
-                        <option value="select_training">Select a training</option>
-                        <option value="cobol">Cobol training</option>
-                        <option value="object">Object training</option>
-                        <option value="dual_skills">Dual Skills training</option>
+                    <select asp-for="TypeTraining">
+                        <option value="">Sélectionner une formation</option>
+                        <option value="Formation Cobol">Formation Cobol</option>
+                        <option value="Formation par objet">Formation par objet</option>
+                        <option value="Formation à couuble compétence">Formation à double compétence</option>
                     </select>
+                    <span asp-validation-for="TypeTraining"></span>
                 </td>
-                <span asp-validation-for="Name"></span>
+                
             </tr>
         </table>
 
         <table>
-            <caption>Training reviews</caption>
+            <caption>Avis sur la formation</caption>
             <tr>
-                <td>Cobol Formation</td>
-                <td><input asp-for="ReviewCobol" /></td>
-                <span asp-validation-for="ReviewCobol"></span>
+                <td>Formation Cobol</td>
+                <td><input asp-for="ReviewCobol"/><span asp-validation-for="ReviewCobol"></span></td>
             </tr>
             <tr>
-                <td>C# Formation</td>
-                <td><input asp-for="ReviewCSharp" /></td>
-                <span asp-validation-for="ReviewCSharp"></span>
+                <td>Formation C#</td>
+                <td><input asp-for="ReviewCSharp"/><span asp-validation-for="ReviewCSharp"></span></td>
             </tr>
         </table>
-            <input type="submit" value="Validate" />
+            <input type="submit" value="Valider" />
     </form>
 
-    @* TODO: Search how to display data for "list des avis" (linked to xml file ?)
-        Add Layout to make the construction of pages easier
+    @* TODO: Add Layout to make the construction of pages easier
         Review HomeController and implement todo
         Should I do something about page url not being the right one when wrong form or for validation page ?
     *@

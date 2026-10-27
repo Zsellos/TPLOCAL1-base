@@ -15,57 +15,57 @@
     <div>
         <p>Votre formulaire a bien été pris en compte</p>
             <table>
-                <caption>Personal informations</caption>
+                <caption>Informations personnelles</caption>
                 <tr>
-                    <td>Name</td>
+                    <td>Nom</td>
                     <td>@Model.Name</td>
                 </tr>
                 <tr>
-                    <td>Forename</td>
+                    <td>Prénom</td>
                     <td>@Model.Forename</td>
                 </tr>
                 <tr>
-                    <td>Gender</td>
+                    <td>Sexe</td>
                     <td>@Model.Gender</td>
                 </tr>
                 <tr>
-                    <td>Address</td>
+                    <td>Addresse</td>
                     <td>@Model.Address</td>
                 </tr>
                 <tr>
-                    <td>Zip Code</td>
+                    <td>Code Postal</td>
                     <td>@Model.ZipCode</td>
                 </tr>
                 <tr>
-                    <td>Town</td>
+                    <td>Ville</td>
                     <td>@Model.Town</td>
                 </tr>
                 <tr>
-                    <td>Email Adress</td>
+                    <td>Addresse mail</td>
                     <td>@Model.Email</td>
                 </tr>
             </table>
 
             <table>
-                <caption>Training information</caption>
+                <caption>Informations formation suivie</caption>
                 <tr>
-                    <td>Start date training</td>
-                    <td>@Model.StartDate</td> @*TODO: Make sure date is dd/mm/yyyy*@
+                    <td>Date de début de formation</td>
+                    <td>@Model.StartDate.ToString("dd/MM/yyyy")</td>
                 </tr>
                 <tr>
-                    <td>Type of training</td>
+                    <td>Formation suivie</td>
                     <td>@Model.TypeTraining</td>
                 </tr>
             </table>
 
             <table>
-                <caption>Training reviews</caption>
+            <caption>Avis sur la formation</caption>
                 <tr>
-                    <td>Cobol Formation</td>
+                    <td>Formation Cobol</td>
                     <td>@Model.ReviewCobol</td>
                 </tr>
                 <tr>
-                    <td>C# Formation</td>
+                    <td>Formation C#</td>
                     <td>@Model.ReviewCSharp</td>
                 </tr>
             </table>
