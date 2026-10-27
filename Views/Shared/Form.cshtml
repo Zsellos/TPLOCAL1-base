@@ -2,15 +2,20 @@
 
 @{
     ViewData["Title"] = "Formulaire TP HN avis";
+
+    ViewData["Accueil"] = "true";
+    ViewData["IndexForm"] = "false";
+    ViewData["Avis"] = "true";
+    ViewData["Form"] = "false";
 }
 @* @Html.ValidationSummary(false, "") *@
 
-<nav>
+@* <nav>
     <ul>
         <li><a href="/Home/Index">Accueil</a></li>
         <li><a href="/Home/Index/AvisList">Liste avis</a></li>
     </ul>
-</nav>
+</nav> *@
 
 <section>
 <div>
@@ -88,12 +93,6 @@
             </tr>
         </table>
             <input type="submit" value="Valider" />
-    </form>
-
-    @* TODO: Add Layout to make the construction of pages easier
-        Review HomeController and implement todo
-        Should I do something about page url not being the right one when wrong form or for validation page ?
-    *@
-            
+    </form>            
 </div>
 </section>

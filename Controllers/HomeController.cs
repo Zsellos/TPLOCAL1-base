@@ -22,12 +22,12 @@ namespace TPLOCAL1.Controllers
                 switch (id)
                 {
                     case "OpinionList" or "AvisList":
-                        //TODO : code reading of the xml files provide
+                        //code reading of the xml files provide
                         var opinions = new OpinionList();
                         List<Opinion> OpList = opinions.GetAvis("XlmFile\\DataAvis.xml");
                         return View(id, OpList);
                     case "Form":
-                        //TODO : call the Form view with data model empty
+                        //call the Form view with data model empty
                         var information = new Information();
                         return View(id, information);
                     default:
@@ -43,10 +43,9 @@ namespace TPLOCAL1.Controllers
         //public ActionResult ValidationFormulaire([Bind("Name,Forename,Gender,Address,ZipCode,Town,Email,StartDate,Training,ReviewCobol,ReviewCSharp")] Information information)
         public ActionResult ValidationFormulaire(Information information)
         {
-            //TODO : test if model's fields are set
+            //test if model's fields are set
             //if not, display an error message and stay on the form page
             //else, call ValidationForm with the datas set by the user
-            // https://localhost:7099/Home/Index/Form
             if (ModelState.IsValid)
             {
                 return View("ValidationForm", information);

@@ -11,6 +11,28 @@
             <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
             <h1>@ViewData["Title"]</h1>
         </header>
+
+        <nav>
+            <ul>
+            @if (bool.Parse(ViewData["Accueil"].ToString()))
+            {
+                <li><a href="/Home/Index">Accueil</a></li>
+            }
+            @if (bool.Parse(ViewData["IndexForm"].ToString()))
+            {
+                <li><a href="/Home/Index/Form">Remplir le formulaire</a></li>
+            }
+            @if (bool.Parse(ViewData["Avis"].ToString()))
+            {
+                <li><a href="/Home/Index/AvisList">Liste avis</a></li>
+            }
+            @if (bool.Parse(ViewData["Form"].ToString()))
+            {
+                <li><a href="/Home/Index/Form">Formulaire</a></li>
+            }
+            </ul>
+        </nav>
+
         @RenderBody()
     </body>
 </html>
